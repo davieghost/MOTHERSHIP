@@ -8,10 +8,18 @@
 [class$='-cl'] {
   float: left;
   padding: 1.2%;
+  margin-left: 0.25%;
+  margin-right: 0.25%;
 }
 [class$='-cl']:last-of-type {
   float: right;
   padding-right: 1.2%;
+  margin-left: 0.25%;
+  margin-right: 0;
+}
+[class$='-cl']:first-of-type {
+  margin-left: 0;
+  margin-right: 0.25%;
 }
 .rw:after {
   display: table;
@@ -23,40 +31,40 @@
   max-width: 1440px;
 }
 .one-cl {
-  width: 100%;
+  width: 99.5%;
 }
 .two-cl {
-  width: 50%;
+  width: 49.5%;
 }
 .three-cl {
-  width: 33.333333333333336%;
+  width: 32.833333333333336%;
 }
 .four-cl {
-  width: 25%;
+  width: 24.5%;
 }
 .five-cl {
-  width: 20%;
+  width: 19.5%;
 }
 .six-cl {
-  width: 16.666666666666668%;
+  width: 16.166666666666668%;
 }
 .seven-cl {
-  width: 14.285714285714286%;
+  width: 13.785714285714286%;
 }
 .eight-cl {
-  width: 12.5%;
+  width: 12%;
 }
 .nine-cl {
-  width: 11.11111111111111%;
+  width: 10.61111111111111%;
 }
 .ten-cl {
-  width: 10%;
+  width: 9.5%;
 }
 .eleven-cl {
-  width: 9.090909090909092%;
+  width: 8.590909090909092%;
 }
 .twelve-cl {
-  width: 8.333333333333334%;
+  width: 7.833333333333334%;
 }
 @media only screen and (max-width: 767px) {
   [class$='-cl'] {
