@@ -23,3 +23,10 @@ _run:_
 ... $ npm run build:watch
 ```  
 In order run the stylus build when changes occur.
+
+
+_todo:_  
+* ~~add margins~~
+* modularize the customization of the grid (column amnt)
+* create a README that is geared toward use of the gird (naming, etc...)
+* refactor 'for loops'
