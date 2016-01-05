@@ -1,0 +1,83 @@
+// VARIABLE NAMES LISTS (add to these for custom grid(s))
+grid12 = one two three four five six seven eight nine ten eleven twelve
+grid16 = one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen
+
+// LAYOUT CONSTANTS (change these for custom grid(s))
+WIDTH    = 100%
+MAXWIDTH = 1440px
+NUMBER   = length(grid12)
+
+// BOXSIZING VENDOR PREFIX MIXIN
+box-size(sizing){
+  -webkit-box-sizing: sizing;
+     -moz-box-sizing: sizing;
+          box-sizing: sizing;
+}
+
+// GRID CALCULATIONS
+mixin-cl-num(width, maxWidth, amount)
+
+  .rw
+    width: width
+    max-width: maxWidth
+
+  if amount == length(grid12)
+    for name, i in grid12
+      .{name}-cl
+        width: (width/(i + 1))
+        // @media only screen and (max-width: 767px)
+        //   .{name}-cl
+        //     width: (width)%
+
+  if amount == length(grid16)
+    for name, i in grid16
+      .{name}-cl
+        width: (width/(i + 1))
+        // @media only screen and (max-width: 767px)
+        //   .{name}-cl
+        //     width: (width)%
+
+// BOXSIZING
+*, &:before, &:after
+  box-size: border-box
+
+// ALL COLUMNS
+[class$='-cl']
+  float: left
+  padding: (120/WIDTH)
+  outline: 1px dotted #00ffff
+
+// LAST COLUMNS
+[class$='-cl']:last-of-type
+  float: right
+  padding-right: (120/WIDTH)
+  outline: 1px dotted #00ffff
+
+// ROW CONTAINER
+.rw:after
+  display: table
+  clear: both
+  content: ''
+
+// INSTATIATE THE GRID
+mixin-cl-num(WIDTH, MAXWIDTH, NUMBER)
+
+
+// MEDIA QUERIES
+
+// Smaller than standard 960 (devices and browsers)
+@media only screen and (max-width: 959px) {}
+
+// Tablet Portrait size to standard 960 (devices and browsers)
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+// All Mobile Sizes (devices and browser)
+@media only screen and (max-width: 767px)
+  [class$='-cl']
+    width: WIDTH
+
+// Mobile Landscape Size to Tablet Portrait (devices and browsers)
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+// Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
+@media only screen and (max-width: 479px) {}

@@ -1,0 +1,72 @@
+*,
+:before,
+:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+[class$='-cl'] {
+  float: left;
+  padding: 1.2%;
+  outline: 1px dotted #0ff;
+}
+[class$='-cl']:last-of-type {
+  float: right;
+  padding-right: 1.2%;
+  outline: 1px dotted #0ff;
+}
+.rw:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.rw {
+  width: 100%;
+  max-width: 1440px;
+}
+.one-cl {
+  width: 100%;
+}
+.two-cl {
+  width: 50%;
+}
+.three-cl {
+  width: 33.333333333333336%;
+}
+.four-cl {
+  width: 25%;
+}
+.five-cl {
+  width: 20%;
+}
+.six-cl {
+  width: 16.666666666666668%;
+}
+.seven-cl {
+  width: 14.285714285714286%;
+}
+.eight-cl {
+  width: 12.5%;
+}
+.nine-cl {
+  width: 11.11111111111111%;
+}
+.ten-cl {
+  width: 10%;
+}
+.eleven-cl {
+  width: 9.090909090909092%;
+}
+.twelve-cl {
+  width: 8.333333333333334%;
+}
+@media only screen and (max-width: 767px) {
+  [class$='-cl'] {
+    width: 100%;
+  }
+}
+body {
+  font-family: sans-serif;
+  font-weight: 100;
+  text-align: center;
+}
