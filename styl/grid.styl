@@ -25,17 +25,11 @@ mixin-cl-num(width, maxWidth, amount)
     for name, i in grid12
       .{name}-cl
         width: (width/(i + 1))
-        // @media only screen and (max-width: 767px)
-        //   .{name}-cl
-        //     width: (width)%
 
   if amount == length(grid16)
     for name, i in grid16
       .{name}-cl
         width: (width/(i + 1))
-        // @media only screen and (max-width: 767px)
-        //   .{name}-cl
-        //     width: (width)%
 
 // BOXSIZING
 *, &:before, &:after
@@ -45,13 +39,11 @@ mixin-cl-num(width, maxWidth, amount)
 [class$='-cl']
   float: left
   padding: (120/WIDTH)
-  outline: 1px dotted #00ffff
 
 // LAST COLUMNS
 [class$='-cl']:last-of-type
   float: right
   padding-right: (120/WIDTH)
-  outline: 1px dotted #00ffff
 
 // ROW CONTAINER
 .rw:after
