@@ -1,6 +1,6 @@
-## [MOTHERSHIP](http://davieghost.github.io/MOTEHRSHIP) a light & responsive stylus grid  
+## [MOTHERSHIP](http://davieghost.github.io/MOTHERSHIP) a light & responsive stylus grid  
 The intention of this grid is to give the developer the maximum amount of control over the customization of their grid, all it comes with are basic rows and columns. The thinking here is that you can take this grid and drop it anywhere and be using it in a very short amount of time.
-### To fly the [MOTHERSHIP](http://davieghost.github.io/MOTEHRSHIP) 👽
+### To fly the [MOTHERSHIP](http://davieghost.github.io/MOTHERSHIP) 👽
 ###### markup:
 ```html
 <!-- rw stands for row. the row will hold your columns -->
