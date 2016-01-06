@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>MOTHERSHIP by davieghost</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>MOTHERSHIP</h1>
+        <p>-- Responsive grid using Stylus.</p>
+
+        <p class="view"><a href="https://github.com/davieghost/MOTHERSHIP">View the Project on GitHub <small>davieghost/MOTHERSHIP</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/davieghost/MOTHERSHIP/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/davieghost/MOTHERSHIP/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/davieghost/MOTHERSHIP">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>
+<a id="mothership-a-light--responsive-stylus-grid" class="anchor" href="#mothership-a-light--responsive-stylus-grid" aria-hidden="true"><span class="octicon octicon-link"></span></a>MOTHERSHIP a light &amp; responsive stylus grid</h2>
+
+<p>The intention of this grid is to give the developer the maximum amount of control over the customization of their grid, all it comes with are basic rows and columns. The thinking here is that you can take this grid and drop it anywhere and be using it in a very short amount of time.</p>
+
+<h3>
+<a id="to-fly-the-mothership-" class="anchor" href="#to-fly-the-mothership-" aria-hidden="true"><span class="octicon octicon-link"></span></a>To fly the MOTHERSHIP <g-emoji alias="alien" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f47d.png">👽</g-emoji>
+</h3>
+
+<h6>
+<a id="markup" class="anchor" href="#markup" aria-hidden="true"><span class="octicon octicon-link"></span></a>markup:</h6>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-c">&lt;!-- rw stands for row. the row will hold your columns --&gt;</span>
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>rw<span class="pl-pds">"</span></span>&gt;
+  <span class="pl-c">&lt;!-- the number can be designated by you, the user, in the grid.styl file --&gt;</span>
+  &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>{NUMBER}-cl<span class="pl-pds">"</span></span>&gt;
+    {COLUMN CONTENT}
+  &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p><em>NOTE</em>: Columns are not pluralized, as it is silly, the <code>{NUMBER}</code> is the changeable element that will give the grid its direction. when you have two or more columns, obviously, you should use numbers that add up to the total number of your grid constant <code>GR = ...</code> illustrated below.</p>
+
+<h6>
+<a id="stylus" class="anchor" href="#stylus" aria-hidden="true"><span class="octicon octicon-link"></span></a>stylus:</h6>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// CONSTANTS</span>
+  <span class="pl-c1">GR</span>       <span class="pl-k">=</span> one two three...  
+  <span class="pl-c1">WIDTH</span>    <span class="pl-k">=</span> <span class="pl-c1">100</span><span class="pl-k">%</span>
+  <span class="pl-c1">MAXWIDTH</span> <span class="pl-k">=</span> 1440px
+  <span class="pl-c1">NUMBER</span>   <span class="pl-k">=</span> <span class="pl-en">length</span>(<span class="pl-c1">GR</span>)
+  <span class="pl-c1">MARGIN</span>   <span class="pl-k">=</span> <span class="pl-c1">0.5</span><span class="pl-k">%</span></pre></div>
+
+<p><em>NOTE</em>: Constants you can do a good bit of customization on these variables, maybe all that you need, if not... You should make it code better for you! <g-emoji alias="grin" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f601.png">😁</g-emoji></p>
+
+<p><em>Initial set-up...</em></p>
+
+<div class="highlight highlight-source-shell"><pre>... $ npm install
+... $ npm run build:stylus
+</pre></div>
+
+<p><em>If you want to make changes...</em></p>
+
+<div class="highlight highlight-source-shell"><pre>... $ npm run build:stylus</pre></div>
+
+<p>this will compile the <code>index.css</code> file from the <code>index.styl</code> file.  </p>
+
+<p><em>If you want to make live changes...</em></p>
+
+<div class="highlight highlight-source-shell"><pre>... $ npm run build:watch</pre></div>
+
+<p>and this will compile the <code>index.css</code> file from the <code>index.styl</code> file as you save.  </p>
+
+<p>packages:</p>
+
+<ul>
+<li><a href="https://github.com/stylus/stylus"><em>Stylus</em></a></li>
+<li><a href="https://github.com/Qard/onchange"><em>onchange</em></a></li>
+<li><a href="https://github.com/mikeal/watch"><em>watch</em></a></li>
+</ul>
+
+<p><em>All of these packages should <strong>also</strong> be installed globally</em>  </p>
+
+<div class="highlight highlight-source-shell"><pre>... $ npm install stylus onchange watch-cli -g</pre></div>
+
+<p><em>...that will do the trick</em>  </p>
+
+<h3>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h3>
+
+<p><img src="http://pre09.deviantart.net/308d/th/pre/i/2010/032/9/b/deep_space_nebula_by_hameed.jpg" alt="Deep Space Nebula by:hameed@deviantart">
+Image credit <a href="http://hameed.deviantart.com/">hameed@deviantart</a></p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h3>
+
+<p>(The MIT License)</p>
+
+<p>Copyright (c) Automattic </p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  </p>
+
+<hr>
+
+<p><em>todo:</em>  </p>
+
+<ul>
+<li>clean up</li>
+<li>break stylus files into smaller bits (<em>ie. mixins, variables... etc.</em> )</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/davieghost">davieghost</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
