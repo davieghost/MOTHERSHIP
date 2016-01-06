@@ -1,15 +1,15 @@
 {
-  "name": "responsive-framework",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "MOTHERSHIP",
+  "version": "0.1.0",
+  "description": "a light & responsive stylus grid  ",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:stylus": "stylus styl/index.styl -o css/index.css",
     "build:watch": "onchange './styl/' -- npm run build:stylus"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "David Johnson",
+  "license": "MIT",
   "devDependencies": {
     "onchange": "latest",
     "watch": "latest",

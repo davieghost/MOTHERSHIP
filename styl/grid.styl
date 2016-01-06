@@ -73,7 +73,7 @@ mixin-cl-num(gridType, width, maxWidth, amount, margin)
 mixin-cl-num(GR, WIDTH, MAXWIDTH, NUMBER, MARGIN)
 
 
-// MEDIA QUERIES
+// MEDIA QUERIES (remove curly braces when you add rules, illustrated in 'catchall')
 
 // Smaller than standard 960 (devices and browsers)
 @media only screen and (max-width: 959px) {}
@@ -81,7 +81,7 @@ mixin-cl-num(GR, WIDTH, MAXWIDTH, NUMBER, MARGIN)
 // Tablet Portrait size to standard 960 (devices and browsers)
 @media only screen and (min-width: 768px) and (max-width: 959px) {}
 
-// All Mobile Sizes (devices and browser)
+// All Mobile Sizes ...aka catchall!(devices and browsers)
 @media only screen and (max-width: 767px)
   [class$='-cl']
     width: WIDTH
