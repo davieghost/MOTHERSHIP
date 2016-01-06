@@ -11,7 +11,7 @@ The intention of this grid is to give the developer the maximum amount of contro
   </div>
 </div>
 ```  
-_note_: columns are not pluralized, as it is silly, the `{NUMBER}` is the changeable element that will give the grid its direction. when you have two or more columns, obviously, you should use numbers that add up to the total number of your grid constant `GR = ...` illustrated below.
+_note_: Columns are not pluralized, as it is silly, the `{NUMBER}` is the changeable element that will give the grid its direction. when you have two or more columns, obviously, you should use numbers that add up to the total number of your grid constant `GR = ...` illustrated below.
 
 ###### stylus:  
 ```js  
@@ -22,8 +22,7 @@ _note_: columns are not pluralized, as it is silly, the `{NUMBER}` is the change
   NUMBER   = length(GR)
   MARGIN   = 0.5%
 ```
-_note_:
-
+_note_: Constants you can do a good bit of customization on these variables, maybe all that you need, if not... You should make it code better for you! 😁
 
 
 
