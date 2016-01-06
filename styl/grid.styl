@@ -1,11 +1,20 @@
-// VARIABLE NAMES LISTS (add to these for custom grid(s))
-grid12 = one two three four five six seven eight nine ten eleven twelve
-grid16 = one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen
+// GRID CONSTANT
+GR = one two three four five six seven eight nine ten eleven twelve
+
+/**
+
+ This is another example of the use of the grid constant:
+ GR = one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen
+ you can add or subtract as many columns as you choose.
+
+ ...but much like the highlander, at this time, there can only be one
+
+**/
 
 // LAYOUT CONSTANTS (change these for custom grid(s))
 WIDTH    = 100%
 MAXWIDTH = 1440px
-NUMBER   = length(grid12)
+NUMBER   = length(GR)
 MARGIN   = 0.5%
 
 // BOXSIZING VENDOR PREFIX MIXIN
@@ -16,14 +25,14 @@ box-size(sizing){
 }
 
 // GRID CALCULATIONS
-mixin-cl-num(width, maxWidth, amount, margin)
+mixin-cl-num(gridType, width, maxWidth, amount, margin)
 
   .rw
     width: width
     max-width: maxWidth
 
-  if amount == length(grid12)
-    for name, i in grid12
+  if amount == length(gridType)
+    for name, i in gridType
       .{name}-cl
         width: ((width/(i + 1)) - margin)
 
@@ -61,7 +70,7 @@ mixin-cl-num(width, maxWidth, amount, margin)
   content: ''
 
 // INSTATIATE THE GRID
-mixin-cl-num(WIDTH, MAXWIDTH, NUMBER, MARGIN)
+mixin-cl-num(GR, WIDTH, MAXWIDTH, NUMBER, MARGIN)
 
 
 // MEDIA QUERIES

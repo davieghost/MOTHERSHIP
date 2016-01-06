@@ -111,9 +111,9 @@ body {
 }
 .demo-title {
   margin-bottom: 40px;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  border-radius: 60px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
   -webkit-box-shadow: 0 0 20px 0 #0ff;
   box-shadow: 0 0 20px 0 #0ff;
   border: 0;

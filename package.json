@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:stylus": "stylus styl/index.styl -o css/index.css",
-    "build:watch": "onchange './' -- npm run build:stylus"
+    "build:watch": "onchange './styl/' -- npm run build:stylus"
   },
   "author": "",
   "license": "ISC",
