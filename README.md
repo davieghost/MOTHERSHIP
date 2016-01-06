@@ -1,6 +1,6 @@
-## light & responsive stylus grid  
+## MOTHERSHIP a light & responsive stylus grid  
 The intention of this grid is to give the developer the maximum amount of control over the customization of their grid, all it comes with are basic rows and columns. The thinking here is that you can take this grid and drop it anywhere and be using it in a very short amount of time.
-### grid use  
+### To use mothership
 ###### markup:
 ```html
 <!-- rw stands for row. the row will hold your columns -->
@@ -59,10 +59,26 @@ _All of these packages should **also** be installed globally_
 ```bash
 ... $ npm install stylus onchange watch-cli -g
 ```
-___
+_...that will do the trick_
+### Credits
+![Deep Space Nebula by:hameed@deviantart](images/deep_space_nebula_by_hameed.jpg)  
+Image credit [hameed@deviantart](http://hameed.deviantart.com/)
 
+### License
+(The MIT License)
+
+Copyright (c) Automattic <developer.wordpress.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  
+
+<!--
 _todo:_  
 * ~~add margins~~  
 * ~~modularize the customization of the grid (column amnt)~~  
 * ~~create a README that is geared toward use of the gird (naming, etc...)~~  
 * ~~refactor 'for loops'~~
+-->
