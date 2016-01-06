@@ -61,7 +61,7 @@ _All of these packages should **also** be installed globally_
 ```
 _...that will do the trick_
 ### Credits
-![Deep Space Nebula by:hameed@deviantart](images/deep_space_nebula_by_hameed.jpg)  
+![Deep Space Nebula by:hameed@deviantart](http://pre09.deviantart.net/308d/th/pre/i/2010/032/9/b/deep_space_nebula_by_hameed.jpg)  
 Image credit [hameed@deviantart](http://hameed.deviantart.com/)
 
 ### License
