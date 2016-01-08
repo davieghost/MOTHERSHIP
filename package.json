@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:stylus": "stylus styl/index.styl -o css/index.css",
-    "build:watch": "onchange './styl/' -- npm run build:stylus"
+    "build": "stylus stylus/index.styl -o demo/css/index.css",
+    "watch": "onchange './stylus/' -- npm run build"
   },
   "author": "David Johnson",
   "license": "MIT",

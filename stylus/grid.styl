@@ -34,12 +34,9 @@ mixin-cl-num(gridType, width, maxWidth, amount, margin)
   if amount == length(gridType)
     for name, i in gridType
       .{name}-cl
-        width: ((width/(i + 1)) - margin)
-
-  if amount == length(grid16)
-    for name, i in grid16
-      .{name}-cl
-        width: ((width/(i + 1)) - margin)
+        // width: ((width/(i + 1)) - margin)
+        // width: (i + 1)/
+        width: (width/(i + 1))
 
 // BOXSIZING
 *, &:before, &:after
@@ -49,20 +46,20 @@ mixin-cl-num(gridType, width, maxWidth, amount, margin)
 [class$='-cl']
   float: left
   padding: (120/WIDTH)
-  margin-left: (MARGIN/2)
-  margin-right: (MARGIN/2)
+  // margin-left: (MARGIN/2)
+  // margin-right: (MARGIN/2)
 
 
 // LAST COLUMNS
 [class$='-cl']:last-of-type
   float: right
   padding-right: (120/WIDTH)
-  margin-left: (MARGIN/2)
-  margin-right: 0
+  // margin-left: (MARGIN/2)
+  // margin-right: 0
 
 [class$='-cl']:first-of-type
-  margin-left: 0
-  margin-right: (MARGIN/2)
+  // margin-left: 0
+  // margin-right: (MARGIN/2)
 // ROW CONTAINER
 .rw:after
   display: table

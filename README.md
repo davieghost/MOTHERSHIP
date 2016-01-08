@@ -9,6 +9,10 @@ The intention of this grid is to give the developer the maximum amount of contro
   <div class="{NUMBER}-cl">
     {COLUMN CONTENT}
   </div>
+  <!-- you can do 'shift columns' too -->
+  <div class="{NUMBER}-pl">
+    {SECOND COLUMN CONTENT}
+  </div>
 </div>
 ```  
 
@@ -30,22 +34,22 @@ _Initial set-up..._
 
 ```bash  
 ... $ npm install
-... $ npm run build:stylus
+... $ npm run build
 
 ```  
 
-_If you want to make changes..._
+_If you make changes..._
 
 ```bash
-... $ npm run build:stylus
+... $ npm run build
 ```  
 
 this will compile the `index.css` file from the `index.styl` file.  
 
-_If you want to make live changes..._
+_If you want to make live-compiled changes..._
 
 ```bash  
-... $ npm run build:watch
+... $ npm run watch
 ```  
 and this will compile the `index.css` file from the `index.styl` file as you save.  
 
