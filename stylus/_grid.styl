@@ -34,38 +34,32 @@ mixin-cl-num(gridType, width, maxWidth, amount, margin)
   if amount == length(gridType)
     for name, i in gridType
       .{name}-cl
-        width: ((width/(i + 1)) - margin)
-
-     for name, j in gridType
-      .{name}-pl
-        width: (width - (j + 1)) - (width/(i + 1)) - (margin * 5)
-
+        // width: ((width/(i + 1)) - margin)
+        // width: (i + 1)/
+        width: (width/(i + 1))
 
 // BOXSIZING
 *, &:before, &:after
   box-size: border-box
 
 // ALL COLUMNS
-[class$='-cl'], [class$='-pl']
-  outline: 1px dotted khaki
+[class$='-cl']
   float: left
-  // padding: (120/WIDTH)
-  padding: MARGIN
-  margin-left: (MARGIN/2)
-  margin-right: (MARGIN/2)
+  padding: (120/WIDTH)
+  // margin-left: (MARGIN/2)
+  // margin-right: (MARGIN/2)
 
 
 // LAST COLUMNS
-[class$='-cl']:last-of-type, [class$='-pl']
+[class$='-cl']:last-of-type
   float: right
-  // padding-right: (120/WIDTH)
-  padding-right: MARGIN
-  margin-left: (MARGIN/2)
-  margin-right: 0
+  padding-right: (120/WIDTH)
+  // margin-left: (MARGIN/2)
+  // margin-right: 0
 
 [class$='-cl']:first-of-type
-  margin-left: 0
-  margin-right: (MARGIN/2)
+  // margin-left: 0
+  // margin-right: (MARGIN/2)
 // ROW CONTAINER
 .rw:after
   display: table
@@ -76,7 +70,7 @@ mixin-cl-num(gridType, width, maxWidth, amount, margin)
 mixin-cl-num(GR, WIDTH, MAXWIDTH, NUMBER, MARGIN)
 
 
-// MEDIA QUERIES (remove curly braces when you add rules, illustrated in max-width: 767px example)
+// MEDIA QUERIES (remove curly braces when you add rules, illustrated in 'catchall')
 
 // Smaller than standard 960 (devices and browsers)
 @media only screen and (max-width: 959px) {}
@@ -86,7 +80,7 @@ mixin-cl-num(GR, WIDTH, MAXWIDTH, NUMBER, MARGIN)
 
 // All Mobile Sizes ...aka catchall!(devices and browsers)
 @media only screen and (max-width: 767px)
-  [class$='-cl'], [class$='-pl']
+  [class$='-cl']
     width: WIDTH
 
 // Mobile Landscape Size to Tablet Portrait (devices and browsers)
