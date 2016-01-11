@@ -27,6 +27,7 @@ box-size(sizing){
 // GRID CALCULATIONS
 mixin-cl-num(gridType, width, maxWidth, amount, margin)
 
+
   .rw
     width: width
     max-width: maxWidth
@@ -39,7 +40,7 @@ mixin-cl-num(gridType, width, maxWidth, amount, margin)
     // fill columns
     for name, j in gridType
      .{name}-pl
-       width: (width - (j + 1)) - (width/(i + 1)) - (margin * 5)
+       width: i//(i + 1) - (j + 1) 
 
 // BOXSIZING
 *, &:before, &:after

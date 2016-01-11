@@ -16,6 +16,8 @@ WIDTH    = 100%
 MAXWIDTH = 1440px
 NUMBER   = length(GR)
 MARGIN   = 0.5%
+PADDING  = 0.25%
+
 
 // BOXSIZING VENDOR PREFIX MIXIN
 box-size(sizing){
@@ -25,20 +27,27 @@ box-size(sizing){
 }
 
 // GRID CALCULATIONS
-mixin-cl-num(gridType, width, maxWidth, amount, margin)
+mixin-cl-num(gridType, width, maxWidth, amount, margin, padding)
 
   .rw
     width: width
     max-width: maxWidth
 
+  [class$='-cl'], [class$='-pl']
+    padding: padding
+
+  [class$='-cl']:last-of-type, [class$='-pl']
+    padding-right: padding
+
   if amount == length(gridType)
     for name, i in gridType
       .{name}-cl
-        width: ((width/(i + 1)) - margin)
+        width: ((width/(i + 1)) - (margin * 2))
 
+  if amount == length(gridType)
      for name, j in gridType
       .{name}-pl
-        width: (width - (j + 1)) - (width/(i + 1)) - (margin * 5)
+        width: ( (width - (margin * 16)) - ((width/(j + 1)) - (width/(i + 1))) )
 
 
 // BOXSIZING
@@ -47,10 +56,10 @@ mixin-cl-num(gridType, width, maxWidth, amount, margin)
 
 // ALL COLUMNS
 [class$='-cl'], [class$='-pl']
-  outline: 1px dotted khaki
+  // outline: 1px dotted khaki
   float: left
   // padding: (120/WIDTH)
-  padding: MARGIN
+  // padding: MARGIN
   margin-left: (MARGIN/2)
   margin-right: (MARGIN/2)
 
@@ -59,7 +68,7 @@ mixin-cl-num(gridType, width, maxWidth, amount, margin)
 [class$='-cl']:last-of-type, [class$='-pl']
   float: right
   // padding-right: (120/WIDTH)
-  padding-right: MARGIN
+  // padding-right: MARGIN
   margin-left: (MARGIN/2)
   margin-right: 0
 
@@ -73,7 +82,7 @@ mixin-cl-num(gridType, width, maxWidth, amount, margin)
   content: ''
 
 // INSTATIATE THE GRID
-mixin-cl-num(GR, WIDTH, MAXWIDTH, NUMBER, MARGIN)
+mixin-cl-num(GR, WIDTH, MAXWIDTH, NUMBER, MARGIN, PADDING)
 
 
 // MEDIA QUERIES (remove curly braces when you add rules, illustrated in max-width: 767px example)
