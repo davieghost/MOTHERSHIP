@@ -16,7 +16,8 @@ WIDTH    = 100%
 MAXWIDTH = 1440px
 NUMBER   = length(GR)
 MARGIN   = 0.5%
-PADDING  = 0.25%
+// MARGIN   = 1%
+PADDING  = 0.5%
 
 
 // BOXSIZING VENDOR PREFIX MIXIN
@@ -25,6 +26,9 @@ box-size(sizing){
      -moz-box-sizing: sizing;
           box-sizing: sizing;
 }
+// BOXSIZING
+*, &:before, &:after
+  box-size: border-box
 
 // GRID CALCULATIONS
 mixin-cl-num(gridType, width, maxWidth, amount, margin, padding)
@@ -32,54 +36,39 @@ mixin-cl-num(gridType, width, maxWidth, amount, margin, padding)
   .rw
     width: width
     max-width: maxWidth
+    &:after
+      display: table
+      clear: both
+      content: ''
+
+  [class$='-cl']
+    float: left
 
   [class$='-cl'], [class$='-pl']
-    padding: padding
+    padding-left: padding
+    padding-right: padding
+    margin-left: margin
+    margin-right: margin
+
+  [class$='-cl']:first-of-type
+    margin-left: 0
 
   [class$='-cl']:last-of-type, [class$='-pl']
-    padding-right: padding
+    float: right
+    margin-right: 0
+
+  grid = length(gridType)
 
   if amount == length(gridType)
     for name, i in gridType
+      clMargins = ((((i + 1) * 2) - 2) * margin)
       .{name}-cl
-        width: ((width/(i + 1)) - (margin * 2))
+        width: ((width - clMargins)/(i + 1))
 
   if amount == length(gridType)
-     for name, j in gridType
+    for name, j in gridType
       .{name}-pl
-        width: ( (width - (margin * 16)) - ((width/(j + 1)) - (width/(i + 1))) )
-
-
-// BOXSIZING
-*, &:before, &:after
-  box-size: border-box
-
-// ALL COLUMNS
-[class$='-cl'], [class$='-pl']
-  // outline: 1px dotted khaki
-  float: left
-  // padding: (120/WIDTH)
-  // padding: MARGIN
-  margin-left: (MARGIN/2)
-  margin-right: (MARGIN/2)
-
-
-// LAST COLUMNS
-[class$='-cl']:last-of-type, [class$='-pl']
-  float: right
-  // padding-right: (120/WIDTH)
-  // padding-right: MARGIN
-  margin-left: (MARGIN/2)
-  margin-right: 0
-
-[class$='-cl']:first-of-type
-  margin-left: 0
-  margin-right: (MARGIN/2)
-// ROW CONTAINER
-.rw:after
-  display: table
-  clear: both
-  content: ''
+        width: ((width - margin) - (width/(j + 1)))
 
 // INSTATIATE THE GRID
 mixin-cl-num(GR, WIDTH, MAXWIDTH, NUMBER, MARGIN, PADDING)

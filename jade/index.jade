@@ -1,0 +1,105 @@
+mixin row(cl, obj)
+  div(class=cl)
+    each val, index in obj
+      div(class=obj[0] + '-cl') 
+          p(class='demo-text')= ((index + 1) + ' / ' + obj.length)
+doctype html
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title MOTHERSHIP -- a light &amp; resposive stylus grid
+  link(rel="stylesheet" href="css/index.css")
+  -
+    var listKeys = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'];
+    var listVals = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'];
+    var listEmpt = [];
+    var listObject = function(){
+      this.one = 'one'; 
+      this.two = 'two'; 
+      this.three = 'three'; 
+      this.four = 'four'; 
+      this.five = 'five'; 
+      this.six = 'six'; 
+      this.seven = 'seven'; 
+      this.eight = 'eight'; 
+      this.nine = 'nine'; 
+      this.ten = 'ten'; 
+      this.eleven = 'eleven'; 
+      this.twelve = 'twelve';
+    };
+    
+    //- console.log(listObject.one)  
+      //- var listObject = function(){
+      //-   this.DomObject;
+      //-   // this.Markup;
+      //-   this.Class;
+      //- }
+      //- 
+      //- Element.prototype.setDomObject = function(object) {
+      //-   this.DomObject = document.getElementById(object);
+      //- };
+      //- // Element.prototype.setMarkup = function(element) {
+      //- //   this.Markup = element.DomObject.outerHTML;
+      //- // }
+      //- Element.prototype.setClass = function(element) {
+      //-   this.Class = Array.from(element.DomObject.classList);
+      //- }
+      var list = new listObject();
+    for (var i = 0; i < list.length; i++) {
+      //- list[i] = listVals[i]
+      //- console.log(listObject[i], listVals[i])
+      console.log(list[i])
+    }
+    //- console.log(list.one)
+  script.
+    //- var items =['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']
+    //- var listObject = {};
+    //- list.forEach(function(item, index, array){
+    //-     console.log(item, index)
+    //-     
+    //-   })
+    
+body
+  div.demo-title-container
+    div.rw
+      div.demo-title.one-cl
+        h1.demo-hldn MOTHERSHIP
+        p.demo-text a light and responsive stylus gird.
+  div.demo-generic-container
+    -listEmpt.unshift(listVals[0])
+    -console.log(listEmpt)
+      +row('rw', listEmpt)
+      -listEmpt.unshift(listVals[1])
+      -console.log(listEmpt)
+        +row('rw', listEmpt)
+        -listEmpt.unshift(listVals[2])
+        -console.log(listEmpt)
+          +row('rw', listEmpt)
+          -listEmpt.unshift(listVals[3])
+          -console.log(listEmpt)
+            +row('rw', listEmpt)
+            -listEmpt.unshift(listVals[4])
+            -console.log(listEmpt)
+              +row('rw', listEmpt)
+              -listEmpt.unshift(listVals[5])
+              -console.log(listEmpt)
+                +row('rw', listEmpt)
+                -listEmpt.unshift(listVals[6])
+                -console.log(listEmpt)
+                  +row('rw', listEmpt)
+                  -listEmpt.unshift(listVals[7])
+                  -console.log(listEmpt)
+                    +row('rw', listEmpt)
+                    -listEmpt.unshift(listVals[8])
+                    -console.log(listEmpt)
+                      +row('rw', listEmpt)
+                      -listEmpt.unshift(listVals[9])
+                      -console.log(listEmpt)
+                        +row('rw', listEmpt)
+                        -listEmpt.unshift(listVals[10])
+                        -console.log(listEmpt)
+                          +row('rw', listEmpt)
+                          -listEmpt.unshift(listVals[11])
+                          -console.log(listEmpt)
+                            +row('rw', listEmpt)
+                          
