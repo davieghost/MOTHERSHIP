@@ -1,90 +1,185 @@
-// GRID CONSTANT
-GR = one two three four five six seven eight nine ten eleven twelve
-
-/**
-
- This is another example of the use of the grid constant:
- GR = one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen
- you can add or subtract as many columns as you choose.
-
- ...but much like the highlander, at this time, there can only be one
-
-**/
-
-// LAYOUT CONSTANTS (change these for custom grid(s))
-WIDTH    = 100%
-MAXWIDTH = 1440px
-NUMBER   = length(GR)
-MARGIN   = 0.5%
-
-// BOXSIZING VENDOR PREFIX MIXIN
-box-size(sizing){
-  -webkit-box-sizing: sizing;
-     -moz-box-sizing: sizing;
-          box-sizing: sizing;
-}
-
-// GRID CALCULATIONS
-mixin-cl-num(gridType, width, maxWidth, amount, margin)
-
-  .rw
-    width: width
-    max-width: maxWidth
-
-  if amount == length(gridType)
-    for name, i in gridType
-      .{name}-cl
-        // width: ((width/(i + 1)) - margin)
-        // width: (i + 1)/
-        width: (width/(i + 1))
-
-// BOXSIZING
-*, &:before, &:after
-  box-size: border-box
-
-// ALL COLUMNS
-[class$='-cl']
-  float: left
-  padding: (120/WIDTH)
-  // margin-left: (MARGIN/2)
-  // margin-right: (MARGIN/2)
-
-
-// LAST COLUMNS
-[class$='-cl']:last-of-type
-  float: right
-  padding-right: (120/WIDTH)
-  // margin-left: (MARGIN/2)
-  // margin-right: 0
-
-[class$='-cl']:first-of-type
-  // margin-left: 0
-  // margin-right: (MARGIN/2)
-// ROW CONTAINER
-.rw:after
-  display: table
-  clear: both
-  content: ''
-
-// INSTATIATE THE GRID
-mixin-cl-num(GR, WIDTH, MAXWIDTH, NUMBER, MARGIN)
-
-
-// MEDIA QUERIES (remove curly braces when you add rules, illustrated in 'catchall')
-
-// Smaller than standard 960 (devices and browsers)
-@media only screen and (max-width: 959px) {}
-
-// Tablet Portrait size to standard 960 (devices and browsers)
-@media only screen and (min-width: 768px) and (max-width: 959px) {}
-
-// All Mobile Sizes ...aka catchall!(devices and browsers)
-@media only screen and (max-width: 767px)
-  [class$='-cl']
-    width: WIDTH
-
-// Mobile Landscape Size to Tablet Portrait (devices and browsers)
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
-
-// Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
-@media only screen and (max-width: 479px) {}
+// // GRID CONSTANT
+// GR = one two three four five six seven eight nine ten eleven twelve
+//
+// /**
+//
+//  This is another example of the use of the grid constant:
+//  GR = one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen
+//  you can add or subtract as many columns as you choose.
+//
+//  ...but much like the highlander, at this time, there can only be one
+//
+// **/
+//
+// // LAYOUT CONSTANTS (change these for custom grid(s))
+// WIDTH    = 100%
+// MAXWIDTH = 1440px
+// NUMBER   = length(GR)
+// MARGIN   = 0.5%
+//
+// // BOXSIZING VENDOR PREFIX MIXIN
+// box-size(sizing){
+//   -webkit-box-sizing: sizing;
+//      -moz-box-sizing: sizing;
+//           box-sizing: sizing;
+// }
+//
+// // GRID CALCULATIONS
+// mixin-cl-num(gridType, width, maxWidth, amount, margin)
+//
+//   .rw
+//     width: width
+//     max-width: maxWidth
+//
+//   if amount == length(gridType)
+//     for name, i in gridType
+//       .{name}-cl
+//         // width: ((width/(i + 1)) - margin)
+//         // width: (i + 1)/
+//         width: (width/(i + 1))
+//
+// // BOXSIZING
+// *, &:before, &:after
+//   box-size: border-box
+//
+// // ALL COLUMNS
+// [class$='-cl']
+//   float: left
+//   padding: (120/WIDTH)
+//   // margin-left: (MARGIN/2)
+//   // margin-right: (MARGIN/2)
+//
+//
+// // LAST COLUMNS
+// [class$='-cl']:last-of-type
+//   float: right
+//   padding-right: (120/WIDTH)
+//   // margin-left: (MARGIN/2)
+//   // margin-right: 0
+//
+// [class$='-cl']:first-of-type
+//   // margin-left: 0
+//   // margin-right: (MARGIN/2)
+// // ROW CONTAINER
+// .rw:after
+//   display: table
+//   clear: both
+//   content: ''
+//
+// // INSTATIATE THE GRID
+// mixin-cl-num(GR, WIDTH, MAXWIDTH, NUMBER, MARGIN)
+//
+//
+// // MEDIA QUERIES (remove curly braces when you add rules, illustrated in 'catchall')
+//
+// // Smaller than standard 960 (devices and browsers)
+// @media only screen and (max-width: 959px) {}
+//
+// // Tablet Portrait size to standard 960 (devices and browsers)
+// @media only screen and (min-width: 768px) and (max-width: 959px) {}
+//
+// // All Mobile Sizes ...aka catchall!(devices and browsers)
+// @media only screen and (max-width: 767px)
+//   [class$='-cl']
+//     width: WIDTH
+//
+// // Mobile Landscape Size to Tablet Portrait (devices and browsers)
+// @media only screen and (min-width: 480px) and (max-width: 767px) {}
+//
+// // Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
+// @media only screen and (max-width: 479px) {}
+// 
+// // GRID CONSTANT
+// GR = one two three four five six seven eight nine ten eleven twelve
+//
+// /**
+//
+//  This is another example of the use of the grid constant:
+//  GR = one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen
+//  you can add or subtract as many columns as you choose.
+//
+//  ...but much like the highlander, at this time, there can only be one
+//
+// **/
+//
+// // LAYOUT CONSTANTS (change these for custom grid(s))
+// WIDTH    = 100%
+// MAXWIDTH = 1440px
+// NUMBER   = length(GR)
+// MARGIN   = 0.5%
+// // MARGIN   = 1%
+// PADDING  = 0.5%
+//
+//
+// // BOXSIZING VENDOR PREFIX MIXIN
+// box-size(sizing){
+//   -webkit-box-sizing: sizing;
+//      -moz-box-sizing: sizing;
+//           box-sizing: sizing;
+// }
+// // BOXSIZING
+// *, &:before, &:after
+//   box-size: border-box
+//
+// // GRID CALCULATIONS
+// mixin-cl-num(gridType, width, maxWidth, amount, margin, padding)
+//
+//   .rw
+//     width: width
+//     max-width: maxWidth
+//     &:after
+//       display: table
+//       clear: both
+//       content: ''
+//
+//   [class$='-cl']
+//     float: left
+//
+//   [class$='-cl'], [class$='-pl']
+//     padding-left: padding
+//     padding-right: padding
+//     margin-left: margin
+//     margin-right: margin
+//
+//   [class$='-cl']:first-of-type
+//     margin-left: 0
+//
+//   [class$='-cl']:last-of-type, [class$='-pl']
+//     float: right
+//     margin-right: 0
+//
+//   grid = length(gridType)
+//
+//   if amount == length(gridType)
+//     for name, i in gridType
+//       clMargins = ((((i + 1) * 2) - 2) * margin)
+//       .{name}-cl
+//         width: ((width - clMargins)/(i + 1))
+//
+//   if amount == length(gridType)
+//     for name, j in gridType
+//       .{name}-pl
+//         width: ((width - margin) - (width/(j + 1)))
+//
+// // INSTATIATE THE GRID
+// mixin-cl-num(GR, WIDTH, MAXWIDTH, NUMBER, MARGIN, PADDING)
+//
+//
+// // MEDIA QUERIES (remove curly braces when you add rules, illustrated in max-width: 767px example)
+//
+// // Smaller than standard 960 (devices and browsers)
+// @media only screen and (max-width: 959px) {}
+//
+// // Tablet Portrait size to standard 960 (devices and browsers)
+// @media only screen and (min-width: 768px) and (max-width: 959px) {}
+//
+// // All Mobile Sizes ...aka catchall!(devices and browsers)
+// @media only screen and (max-width: 767px)
+//   [class$='-cl'], [class$='-pl']
+//     width: WIDTH
+//
+// // Mobile Landscape Size to Tablet Portrait (devices and browsers)
+// @media only screen and (min-width: 480px) and (max-width: 767px) {}
+//
+// // Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
+// @media only screen and (max-width: 479px) {}

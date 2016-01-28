@@ -57,6 +57,9 @@ mixin-cl-num(gridType, width, maxWidth, amount, margin, padding)
     float: right
     margin-right: 0
 
+  [class$='-psh']
+    float: left
+
   grid = length(gridType)
 
   if amount == length(gridType)
@@ -69,6 +72,12 @@ mixin-cl-num(gridType, width, maxWidth, amount, margin, padding)
     for name, j in gridType
       .{name}-pl
         width: ((width - margin) - (width/(j + 1)))
+
+  if amount == length(gridType)
+    for name, j in gridType
+      .{name}-psh
+        width: ((width - margin) - (width/(j + 1)))
+
 
 // INSTATIATE THE GRID
 mixin-cl-num(GR, WIDTH, MAXWIDTH, NUMBER, MARGIN, PADDING)

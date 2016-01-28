@@ -84,5 +84,14 @@ THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ---  
 
 _todo:_  
+* set up odd/single odd/even and odd/even classes for columns
+* ~~add push columns~~
 * clean up
 * break stylus files into smaller bits (_ie. mixins, variables... etc._ )
+
+
+<!--
+
+stylus ./stylus/*.styl -o ./demo/css/index.css --watch
+jade ./jade/*.jade -o ./demo/ -P --watch
+ -->
